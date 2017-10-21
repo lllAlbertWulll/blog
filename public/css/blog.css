@@ -1,0 +1,214 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+    /*color: rgb(61, 146, 201);*/
+}
+a:hover,
+a:focus {
+    color: #ccc;
+    text-decoration: none;
+}
+
+h3 {
+    font-weight: 100;
+}
+
+/* LAYOUT CSS */
+.pure-img-responsive {
+    max-width: 100%;
+    height: auto;
+}
+
+#layout {
+    padding: 0;
+}
+
+.header {
+    text-align: center;
+    top: auto;
+    margin: 3em auto;
+}
+
+.sidebar {
+    background: rgb(61, 79, 93);
+    color: #ccc;
+    -moz-user-select: -moz-none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.brand-title,
+.brand-tagline {
+    margin: 0;
+}
+
+.brand-title {
+    /*margin: 0 1em 1em 1em;*/
+    text-transform: uppercase;
+}
+
+.brand-tagline {
+    /*margin: 0 1em 0 1em;*/
+    font-weight: 300;
+}
+
+.brand-author {
+    font-weight: 600;
+    /*margin: 1em 1em;*/
+}
+
+
+.content-subhead {
+    text-transform: uppercase;
+    color: #aaa;
+    border-bottom: 1px solid #eee;
+    padding: 0.4em 0;
+    font-size: 80%;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+}
+
+.content {
+    padding: 2em 1em 0;
+}
+
+.posts {
+    font-weight: bold;
+}
+
+.post {
+    padding-bottom: 2em;
+}
+.post-title {
+    font-size: 2em;
+    color: #222;
+    margin-bottom: 0.2em;
+}
+
+.post-title a {
+    color: #222;
+}
+
+.post-title a:hover {
+    color: #ccc;
+    text-decoration: none;
+}
+
+.post-avatar {
+    border-radius: 50px;
+    float: right;
+    margin-left: 1em;
+}
+
+.post-meta {
+    color: #999;
+    font-size: 90%;
+    margin: 0;
+}
+
+.post-category {
+    margin: 0 0.1em;
+    padding: 0.1em 0.5em;
+    border-radius: 50px;
+    border: 1px solid #cccccc;
+    color: #ccc;
+    background: #fff;
+    font-size: 80%;
+    -moz-user-select: -moz-none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.post-category:hover {
+    color: #fff;
+    background-color: #ccc;
+    border: 1px solid #cccccc;
+}
+
+.post-images {
+    margin: 1em 0;
+}
+.post-image-meta {
+    margin-top: -3.5em;
+    margin-left: 1em;
+    color: #fff;
+    text-shadow: 0 1px 1px #333;
+}
+
+.wrap {
+    font-weight: bold;
+    text-align: center;
+    padding: 1em 0;
+    -moz-user-select: -moz-none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.wrap a {
+    color: #ccc;
+    font-size: 80%;
+}
+.wrap .pure-menu a:hover,
+.wrap .pure-menu a:focus {
+    background: #ccc;
+    color: #ffffff;
+    border-radius: 50px;
+
+}
+
+.blog-detail {
+
+}
+
+.blog-title {
+    font-weight: bold;
+}
+
+.blog-content {
+    margin-top: 2em;
+}
+
+.blog-content img {
+    width: 50%;
+    height: auto;
+}
+
+.footer {
+    text-align: center;
+    font-size: 0.5em;
+    font-weight: 600;
+    margin: 3em auto 2em auto;
+
+}
+
+.copyright {
+    padding: 5px 5px;
+}
+
+
+@media (min-width: 48em) {
+    .content {
+        padding: 2em 3em 0;
+        margin-left: 25%;
+    }
+
+    .header {
+        margin: 80% 2em 0;
+        text-align: right;
+    }
+
+    .sidebar {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+    }
+}
