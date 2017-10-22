@@ -6,6 +6,7 @@ use Auth;
 use Illuminate\Http\Request;
 use App\Repositories\BlogRepository;
 use App\Http\Requests\StoreBlogRequest;
+use Illuminate\Mail\Markdown;
 
 class BlogsController extends Controller
 {
@@ -14,7 +15,7 @@ class BlogsController extends Controller
     public function __construct(BlogRepository $blogRepository){
         // 需要保证用户在登录状态下才可以发布问题
         // index / show 两个页面无需用户登录也可以浏览
-        $this->middleware('auth')->except(['index', 'detail']);
+        $this->middleware('auth')->except(['index', 'detail', 'resume']);
         $this->blogRepository = $blogRepository;
     }
 
@@ -61,6 +62,7 @@ class BlogsController extends Controller
     public function show($id)
     {
         $blog = $this->blogRepository->findSingleByIdWithCategories($id);
+        $blog['body'] = Markdown::parse($blog['body']);
 
         return view('blog.show',compact('blog'));
     }
@@ -68,6 +70,7 @@ class BlogsController extends Controller
     public function detail($id)
     {
         $blog = $this->blogRepository->findSingleByIdWithCategories($id);
+        $blog['body'] = Markdown::parse($blog['body']);
 
         return view('blog.detail',compact('blog'));
     }
@@ -97,5 +100,10 @@ class BlogsController extends Controller
     {
         $this->blogRepository->deleteById($id);
         return redirect()->route('blog.list');
+    }
+
+    public function resume()
+    {
+        return view('blog.resume');
     }
 }

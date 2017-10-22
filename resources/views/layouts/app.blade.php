@@ -12,6 +12,7 @@
     <!-- Styles -->
     <link href="{{ elixir('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/self.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/prism.css') }}" rel="stylesheet">
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     @yield('css')
 
@@ -89,6 +90,7 @@
 
     <!-- Scripts -->
     <script src="{{ elixir('js/app.js') }}"></script>
+    <script src="{{ asset('js/prism.js') }}"></script>
     @yield('js')
     <script>
         $('#flash-overlay-modal').modal();

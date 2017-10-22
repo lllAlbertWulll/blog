@@ -13,7 +13,8 @@
 
 // 前台
 Route::get('/', 'BlogsController@index');                                                   // 首页
-Route::get('blogs/detail/{id}','BlogsController@detail')->name('blog.detail');              // 博文详情
+Route::get('blogs/detail/{id}','BlogsController@detail')->name('blog.detail');            // 博文详情
+Route::get('resume','BlogsController@resume')->name('resume');
 
 // 后台
 Route::get('/home', 'HomeController@index')->name('home');                                  // 后台首页
